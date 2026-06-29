@@ -1,0 +1,29 @@
+package lamdaFunction;
+
+import java.util.Arrays;
+import java.util.List;
+import java.util.Map;
+import java.util.stream.Collectors;
+
+public class EachComp {
+	public static void main(String[] args) {
+
+		Employe e1 = new Employe("Ramesh", "Wipro", 36500);
+		Employe e2 = new Employe("Suresh", "TCS", 37500);
+		Employe e3 = new Employe("Raj", "TCS", 55000);
+		Employe e4 = new Employe("Krishna", "Wipro", 35800);
+		Employe e5 = new Employe("Surya", "Infosys", 42900);
+		Employe e6 = new Employe("Chandra", "Capgemini", 25800);
+		Employe e7 = new Employe("Ramesh", "Wipro", 36500);
+		List<Employe> l1 = Arrays.asList(e1, e2, e3, e4, e5, e6, e7);
+		Map<Object, List<Employe>> hm = l1.stream().collect(Collectors.groupingBy(emp->emp.getComp()));
+		
+		
+
+
+//		String str = l1.stream().map(emp->emp.company).distinct().collect(Collectors.joining(",",">",">" System.out.println(str);
+//		Map.forEach((k,v)->{System.out.println(K+":");
+		
+	}
+
+}

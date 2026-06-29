@@ -1,0 +1,27 @@
+package lamdaFunction;
+
+import java.util.Arrays;
+import java.util.List;
+import java.util.Map;
+import java.util.stream.Collectors;
+
+public class GroupBy {
+
+    public static void main(String[] args) {
+
+        List<Employee> emp = Arrays.asList(
+                new Employee("John", "TCS", 30000),
+                new Employee("Alice", "Infosys", 35000),
+                new Employee("Bob", "TCS", 40000),
+                new Employee("David", "Wipro", 45000),
+                new Employee("Mary", "Infosys", 50000)
+        );
+
+        Map<String, List<Employee>> companyWiseEmployees =
+                emp.stream()
+                   .collect(Collectors.groupingBy(Employee::getCompany));
+
+        companyWiseEmployees.forEach((company, empList) ->
+                System.out.println(company + " => " + empList));
+    }
+}

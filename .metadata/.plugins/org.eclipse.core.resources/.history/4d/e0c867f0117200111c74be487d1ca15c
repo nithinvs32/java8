@@ -1,0 +1,21 @@
+package practiesQuestions;
+
+import java.util.*;
+import java.util.stream.*;
+
+public class EmployeeBySal {
+
+	public static void main(String[] args) {
+
+        List<Employee> employees = Arrays.asList(
+                new Employee("John", "Wipro", 45000),
+                new Employee("Ravi", "Infosys", 38000),
+                new Employee("Anu", "TCS", 50000),
+                new Employee("Priya", "Wipro", 65000),
+                new Employee("Raj", "Infosys", 35000),
+                new Employee("Kiran", "TCS", 30000),
+                new Employee("Neha", "Wipro", 25000),
+                new Employee("Amit", "TCS", 70000)
+
+    }
+}

@@ -1,0 +1,31 @@
+package lamdaFunction;
+
+public class Employee {
+
+    private String name;
+    private String company;
+    private double salary;
+
+    public Employee(String name, String company, double salary) {
+        this.name = name;
+        this.company = company;
+        this.salary = salary;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getCompany() {
+        return company;
+    }
+
+    public double getSalary() {
+        return salary;
+    }
+
+    @Override
+    public String toString() {
+        return "Employee{name='" + name + "', company='" + company + "', salary=" + salary + "}";
+    }
+}

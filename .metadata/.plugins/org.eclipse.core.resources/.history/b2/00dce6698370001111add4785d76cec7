@@ -1,0 +1,20 @@
+public class Employee {
+	private String name;
+	private String company;
+	private int salary;
+
+	public Employee(String name, String company, int salary) {
+		this.name = name;
+		this.company = company;
+		this.salary = salary;
+	}
+
+	public String getCompany() {
+		return company;
+	}
+
+	@Override
+	public String toString() {
+		return name + " (" + salary + ")";
+	}
+}

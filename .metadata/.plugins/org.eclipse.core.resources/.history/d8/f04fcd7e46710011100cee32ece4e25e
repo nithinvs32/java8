@@ -1,0 +1,24 @@
+package lamdaFunction;
+
+import java.util.Arrays;
+import java.util.List;
+import java.util.stream.Collectors;
+
+public class GroupBy {
+    public static void main(String[] args) {
+
+        List<Employe> employees = Arrays.asList(
+                new Employe("John", 30000),
+                new Employe("Alice", 35000),
+                new Employe("Bob", 40000)
+        );
+
+        List<Employe> updatedEmployees = employees.stream()
+                .map(emp -> new Employe(
+                        emp.getName(),
+                        emp.getSalary() + 2000))
+                .collect(Collectors.toList());
+
+        System.out.println(updatedEmployees);
+    }
+}

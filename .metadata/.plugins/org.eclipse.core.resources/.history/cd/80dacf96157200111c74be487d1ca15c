@@ -1,0 +1,19 @@
+package practiesQuestions;
+
+import java.util.*;
+import java.util.stream.*;
+
+public class EmployeeHike {
+	public static void main(String[] args) {
+		EmployeeBySal E1 = new EmployeeBySal();
+		List<Employee> L1 = E1.emps;
+		List<Employee> hikeEmployees = L1.stream()
+				.filter(e -> (e.getCompany().equals("TCS") || e.getCompany().equals("Wipro")))
+				.filter(e -> e.getSalary() >= 30000 && e.getSalary() <= 70000)
+				.map(e -> new Employee(e.getName(), e.getCompany(), e.getSalary() * 1.20)).collect(Collectors.toList());
+
+		System.out.println("After 20% hike:");
+		hikeEmployees.forEach(System.out::println);
+	}
+
+}

@@ -1,0 +1,14 @@
+import java.util.Arrays;
+import java.util.List;
+
+public class GroupBy {
+	public static void main(String[] args) {
+		List<Employee> employees = Arrays.asList(new Employee("John", 30000), new Employee("Alice", 35000),
+				new Employee("Bob", 40000));
+
+		List<Employee> updatedEmployees = employees.stream()
+				.map(emp -> new Employee(emp.getName(), emp.getSalary() + 2000)).collect(Collectors.toList());
+
+		System.out.println(updatedEmployees);
+	}
+}
